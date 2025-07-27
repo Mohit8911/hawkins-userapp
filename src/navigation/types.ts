@@ -1,3 +1,5 @@
+import { FeaturedProduct } from '@/screens/main/Home2/home2.types';
+
 export type RootStackParamList = {
   Auth: undefined;
   Main: undefined;
@@ -21,6 +23,6 @@ export type MainStackParamList = {
 export type HomeStackParamList = {
   Home2: undefined;
   ProductDetail: {
-    productId?: string;
+    product?: FeaturedProduct;
   };
 }; 

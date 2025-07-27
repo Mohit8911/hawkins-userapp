@@ -47,44 +47,44 @@ const categories: Category[] = [
   { id: '10', name: 'COOKWARE_SETS', icon: '📦', count: '25+' }
 ];
 
-// Sample featured products data
+// Sample featured products data based on Hawkins website
 const featuredProducts: FeaturedProduct[] = [
   {
-    id: '1',
-    name: 'Futura Pressure Cooker',
-    price: '₹2,499',
-    originalPrice: '₹3,999',
-    discount: '38%',
+    id: 'FP20',
+    name: 'Futura Hard Anodised 2 Litre (FP20)',
+    price: '₹3,195',
+    originalPrice: '₹3,550',
+    discount: '10%',
     image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=300&fit=crop',
     rating: 4.5,
     reviews: 1247
   },
   {
-    id: '2',
-    name: 'Aqua Nonstick Pan',
-    price: '₹1,299',
-    originalPrice: '₹1,999',
-    discount: '35%',
+    id: 'FP40',
+    name: 'Futura Hard Anodised 4 Litre (FP40)',
+    price: '₹4,195',
+    originalPrice: '₹4,650',
+    discount: '10%',
     image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=300&h=300&fit=crop',
     rating: 4.3,
     reviews: 892
   },
   {
-    id: '3',
-    name: 'PRO Tri-ply Cookware Set',
-    price: '₹4,999',
-    originalPrice: '₹7,999',
-    discount: '38%',
+    id: 'FP60',
+    name: 'Futura Hard Anodised 6 Litre (FP60)',
+    price: '₹5,195',
+    originalPrice: '₹5,750',
+    discount: '10%',
     image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=300&fit=crop',
     rating: 4.7,
     reviews: 567
   },
   {
-    id: '4',
-    name: 'Stainless Steel Handi',
-    price: '₹899',
-    originalPrice: '₹1,299',
-    discount: '31%',
+    id: 'FP30',
+    name: 'Futura Hard Anodised 3 Litre (FP30)',
+    price: '₹3,695',
+    originalPrice: '₹4,100',
+    discount: '10%',
     image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=300&h=300&fit=crop',
     rating: 4.2,
     reviews: 445
@@ -129,7 +129,7 @@ const Home2 = () => {
   );
 
   const renderCategoryItem = ({ item }: { item: Category }) => (
-    <Pressable style={styles.categoryItem} onPress={() => navigation.navigate('ProductDetail' as never)}>
+    <Pressable style={styles.categoryItem} onPress={() => (navigation as any).navigate('ProductDetail', { product: featuredProducts[0] })}>
       <View style={styles.categoryIcon}>
         <TextComp text={item.icon} style={styles.categoryIconText} />
       </View>
@@ -139,7 +139,7 @@ const Home2 = () => {
   );
 
   const renderProductItem = ({ item }: { item: FeaturedProduct }) => (
-    <Pressable style={styles.productItem} onPress={() => navigation.navigate('ProductDetail' as never)}>
+    <Pressable style={styles.productItem} onPress={() => (navigation as any).navigate('ProductDetail', { product: item })}>
       <Image source={{ uri: item.image }} style={styles.productImage} />
       <View style={styles.productInfo}>
         <TextComp text={item.name} style={styles.productName} />
