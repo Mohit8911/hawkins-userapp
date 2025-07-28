@@ -5,6 +5,7 @@ import { initReactI18next } from "react-i18next";
 
 import enTranslation from "./en.json";
 import arTranslation from "./ar.json";
+import hiTranslation from "./hi.json";
 
 /**
  * Initializes i18next for internationalization in a React Native application,
@@ -18,13 +19,16 @@ i18n
   .init({
     debug: __DEV__, // Enable debug mode for development
     fallbackLng: "en", // Fallback language if translation for detected language is unavailable
-    supportedLngs: ["en", "ar"], // Supported languages in the application
+    supportedLngs: ["en", "ar", "hi"], // Supported languages in the application
     resources: {
       en: {
         translation: enTranslation, // English translations loaded from en.json
       },
       ar: {
         translation: arTranslation, // Arabic translations loaded from ar.json
+      },
+      hi: {
+        translation: hiTranslation, // Hindi translations loaded from hi.json
       },
     },
   });

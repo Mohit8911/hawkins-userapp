@@ -25,12 +25,7 @@ export const MainStack = () => {
 
   const screenOptions: BottomTabNavigationOptions = {
     headerShown: false,
-    tabBarShowLabel: true,
-    tabBarLabelStyle: {
-      fontSize: moderateScale(12),
-      fontFamily: fontFamily.medium,
-      color: colors.text,
-    },
+    tabBarShowLabel: false,
     tabBarStyle: {
       // backgroundColor: Colors.background,
       borderTopWidth: 1,
@@ -60,11 +55,11 @@ export const MainStack = () => {
           focused ? <ProfileInactiveIcon color={color} /> : <ProfileInactiveIcon color={color} />
         ),
       }} />
-      <Tab.Screen name="Settings" component={Settings} options={{
+      {/* <Tab.Screen name="Settings" component={Settings} options={{
         tabBarIcon: ({ color }) => (
           <SettingsIcon fill={colors.text} width={20} height={20} />
         )
-      }} />
+      }} /> */}
     </Tab.Navigator>
   );
 }; 

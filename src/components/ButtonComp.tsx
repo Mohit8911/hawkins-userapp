@@ -75,7 +75,7 @@ const ButtonComp: React.FC<ButtonCompProps> = ({
                     {leftIcon}
                 </View>
             )}
-            <TextComp style={textStyles} text={title} />
+            <TextComp style={textStyles} text={title} numberOfLines={2} />
            
             {rightIcon && (
                 <View style={iconContainerStyle}>
@@ -96,8 +96,9 @@ const useRTLStyles = (isRTL: boolean) => {
             flexDirection: isRTL ? 'row-reverse' : 'row',
             borderWidth: 1,
             borderColor: commonColors.primary,
-            paddingHorizontal: moderateScale(16),
+            paddingHorizontal: moderateScale(20),
             gap: moderateScale(8),
+            minHeight: moderateScale(48),
         },
         buttonSecondary: {
             backgroundColor: commonColors.secondary,
@@ -113,6 +114,7 @@ const useRTLStyles = (isRTL: boolean) => {
             fontFamily: fontFamily.medium,
             lineHeight: moderateScale(19),
             textAlign: 'center',
+            flexShrink: 1,
         },
         textSecondary: {
             color: commonColors.white,

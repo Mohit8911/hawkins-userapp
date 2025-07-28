@@ -161,5 +161,8 @@
     "PAYMENT_METHOD": "Payment Method",
     "CONFIRM_ORDER": "Confirm Order",
     "ITEMS": "Items",
-    "ITEM": "Item"
+    "ITEM": "Item",
+    "REMOVE_ITEM": "Remove Item",
+    "REMOVE_ITEM_CONFIRMATION": "Are you sure you want to remove this item from your cart?",
+    "CANCEL": "Cancel"
 }

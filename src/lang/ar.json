@@ -161,5 +161,8 @@
     "PAYMENT_METHOD": "طريقة الدفع",
     "CONFIRM_ORDER": "تأكيد الطلب",
     "ITEMS": "العناصر",
-    "ITEM": "العنصر"
+    "ITEM": "العنصر",
+    "REMOVE_ITEM": "إزالة العنصر",
+    "REMOVE_ITEM_CONFIRMATION": "هل أنت متأكد من أنك تريد إزالة هذا العنصر من سلة التسوق؟",
+    "CANCEL": "إلغاء"
 }

@@ -178,7 +178,9 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
     checkoutButton: {
       backgroundColor: commonColors.primary,
       paddingVertical: moderateScale(16),
+      paddingHorizontal: moderateScale(24),
       borderRadius: moderateScale(12),
+      minHeight: moderateScale(56),
     },
   }), [isRTL, theme, colors]);
 };

@@ -131,6 +131,7 @@ src/
 The app supports multiple languages:
 - English (en)
 - Arabic (ar)
+- Hindi (hi)
 
 Language files are located in `src/lang/` directory.
 

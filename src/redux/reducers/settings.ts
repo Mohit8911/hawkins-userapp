@@ -21,6 +21,7 @@ export interface SettingsState {
 const supportedLanguages: Array<LanguageInterface> = [
   { name: "English", sortName: "en" },
   { name: "Arabic", sortName: "ar" },
+  { name: "हिंदी", sortName: "hi" },
 ];
 
 const initialState: SettingsState = {

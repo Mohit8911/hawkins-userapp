@@ -34,7 +34,7 @@ const HeaderComp: React.FC<HeaderCompProps> = ({
 
     const colors = Colors[theme];
 
-    const { defaultTheme } = useSelector(state => state.settings);
+    const { defaultTheme, defaultLanguage } = useSelector(state => state.settings);
     const { isFirstTime } = useSelector(state => state.auth);
 
     const handleBackPress = () => {
@@ -99,21 +99,30 @@ const HeaderComp: React.FC<HeaderCompProps> = ({
                         />
                         <View style={styles.optionRow}>
                             <TouchableOpacity
-                                style={[styles.optionButton, isRTL && styles.optionButtonActive]}
+                                style={[styles.optionButton, defaultLanguage?.sortName === 'ar' && styles.optionButtonActive]}
                                 onPress={() => changedLanguage({ name: 'Arabic', sortName: 'ar' })}
                             >
                                 <TextComp text="Arabic" isDynamic style={[
                                     styles.optionText,
-                                    isRTL && styles.optionTextActive
+                                    defaultLanguage?.sortName === 'ar' && styles.optionTextActive
                                 ]} />
                             </TouchableOpacity>
                             <TouchableOpacity
-                                style={[styles.optionButton, !isRTL && styles.optionButtonActive]}
+                                style={[styles.optionButton, defaultLanguage?.sortName === 'en' && styles.optionButtonActive]}
                                 onPress={() => changedLanguage({ name: 'English', sortName: 'en' })}
                             >
                                 <TextComp text="English" isDynamic style={[
                                     styles.optionText,
-                                    !isRTL && styles.optionTextActive
+                                    defaultLanguage?.sortName === 'en' && styles.optionTextActive
+                                ]} />
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                style={[styles.optionButton, defaultLanguage?.sortName === 'hi' && styles.optionButtonActive]}
+                                onPress={() => changedLanguage({ name: 'हिंदी', sortName: 'hi' })}
+                            >
+                                <TextComp text="हिंदी" isDynamic style={[
+                                    styles.optionText,
+                                    defaultLanguage?.sortName === 'hi' && styles.optionTextActive
                                 ]} />
                             </TouchableOpacity>
                         </View>
@@ -199,7 +208,7 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'space-between',
-            gap: moderateScale(12),
+            gap: moderateScale(8),
         },
 
         optionButton: {

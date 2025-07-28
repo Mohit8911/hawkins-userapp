@@ -12,6 +12,7 @@ import actions from '@/redux/actions';
 import { useNavigation } from '@react-navigation/native';
 import { MainStackParamList } from '@/navigation/types';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { useTranslation } from 'react-i18next';
 
 type CartNavigationProp = NativeStackNavigationProp<MainStackParamList, 'Cart'>;
 
@@ -21,6 +22,7 @@ type CartNavigationProp = NativeStackNavigationProp<MainStackParamList, 'Cart'>;
 const Cart = () => {
   const { theme } = useTheme();
   const isRTL = useIsRTL();
+  const { t } = useTranslation();
   const styles = useRTLStyles(isRTL, theme);
   const navigation = useNavigation<CartNavigationProp>();
   const dispatch = useDispatch();
@@ -37,18 +39,18 @@ const Cart = () => {
 
   const handleRemoveItem = (id: string) => {
     Alert.alert(
-      'Remove Item',
-      'Are you sure you want to remove this item from your cart?',
+      t('REMOVE_ITEM'),
+      t('REMOVE_ITEM_CONFIRMATION'),
       [
-        { text: 'Cancel', style: 'cancel' },
-        { text: 'Remove', style: 'destructive', onPress: () => dispatch(actions.removeItemFromCart(id)) }
+        { text: t('CANCEL'), style: 'cancel' },
+        { text: t('REMOVE'), style: 'destructive', onPress: () => dispatch(actions.removeItemFromCart(id)) }
       ]
     );
   };
 
   const handleCheckout = () => {
     if (items.length === 0) {
-      Alert.alert('Empty Cart', 'Please add items to your cart before checkout.');
+      Alert.alert(t('CART_EMPTY'), t('CART_EMPTY_MESSAGE'));
       return;
     }
     

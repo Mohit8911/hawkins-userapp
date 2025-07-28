@@ -8,12 +8,14 @@ import { moderateScale } from '@/styles/scaling';
 import React, { useMemo } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { useSelector } from '@/redux/hooks';
+import { useTranslation } from 'react-i18next';
 
 
 // create a component
 const MyTabBar = ({ state, descriptors, navigation }: any) => {
     const isRTL = useIsRTL();
     const { theme } = useTheme();
+    const { t } = useTranslation();
     const styles = useRTLStyles(isRTL, theme);
     const colors = Colors[theme];
     const { totalItems } = useSelector((state) => state.cart);
@@ -63,7 +65,8 @@ const MyTabBar = ({ state, descriptors, navigation }: any) => {
                             )}
                         </View>
                         <TextComp
-                            text={route.name}
+                            text={route.name === 'Cart' ? 'CART' : route.name}
+                            isDynamic={false}
                             style={{
                                 color: isFocused ? commonColors.primary : colors.inputPlaceholder,
                                 marginTop: moderateScale(8)
