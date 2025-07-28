@@ -1,4 +1,4 @@
-import { FeaturedProduct } from '@/screens/main/Home2/home2.types';
+import { FeaturedProduct, Recipe } from '@/screens/main/Home2/home2.types';
 
 export type RootStackParamList = {
   Auth: undefined;
@@ -33,5 +33,8 @@ export type HomeStackParamList = {
   ProductList: {
     category: string;
     subcategory: string;
+  };
+  RecipeDetail: {
+    recipe: Recipe;
   };
 }; 

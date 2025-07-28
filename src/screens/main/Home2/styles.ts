@@ -108,12 +108,22 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
       marginBottom: verticalScale(24),
       paddingHorizontal: moderateScale(16),
     },
+    sectionHeader: {
+      flexDirection: isRTL ? 'row-reverse' : 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      marginBottom: verticalScale(16),
+    },
     sectionTitle: {
       fontFamily: fontFamily.bold,
       fontSize: moderateScale(20),
       color: colors.text,
-      marginBottom: verticalScale(16),
       textAlign: isRTL ? 'right' : 'left',
+    },
+    viewAllText: {
+      fontFamily: fontFamily.medium,
+      fontSize: moderateScale(14),
+      color: commonColors.primary,
     },
     
     // Categories
@@ -225,6 +235,93 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
       fontFamily: fontFamily.regular,
       fontSize: moderateScale(12),
       color: colors.textSecondary,
+    },
+
+    // Recipes Section
+    recipesContainer: {
+      paddingRight: moderateScale(16),
+    },
+    recipeItem: {
+      width: moderateScale(200),
+      marginRight: moderateScale(16),
+      backgroundColor: colors.surface,
+      borderRadius: moderateScale(12),
+      overflow: 'hidden',
+      elevation: 2,
+      shadowColor: commonColors.black,
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.1,
+      shadowRadius: 4,
+    },
+    recipeImage: {
+      width: '100%',
+      height: moderateScale(120),
+      resizeMode: 'cover',
+    },
+    recipeInfo: {
+      padding: moderateScale(12),
+    },
+    recipeName: {
+      fontFamily: fontFamily.bold,
+      fontSize: moderateScale(16),
+      color: colors.text,
+      marginBottom: moderateScale(4),
+      textAlign: isRTL ? 'right' : 'left',
+    },
+    recipeCategory: {
+      fontFamily: fontFamily.medium,
+      fontSize: moderateScale(12),
+      color: commonColors.primary,
+      marginBottom: moderateScale(8),
+      textAlign: isRTL ? 'right' : 'left',
+    },
+    recipeMeta: {
+      flexDirection: isRTL ? 'row-reverse' : 'row',
+      alignItems: 'center',
+      marginBottom: moderateScale(8),
+      flexWrap: 'wrap',
+    },
+    recipeMetaItem: {
+      flexDirection: isRTL ? 'row-reverse' : 'row',
+      alignItems: 'center',
+      marginRight: moderateScale(8),
+      marginBottom: moderateScale(4),
+    },
+    recipeIcon: {
+      fontSize: moderateScale(12),
+      marginRight: moderateScale(4),
+    },
+    recipeMetaText: {
+      fontFamily: fontFamily.regular,
+      fontSize: moderateScale(10),
+      color: colors.textSecondary,
+    },
+    difficultyBadge: {
+      paddingHorizontal: moderateScale(6),
+      paddingVertical: moderateScale(2),
+      borderRadius: moderateScale(4),
+      marginLeft: moderateScale(8),
+    },
+    difficultyEasy: {
+      backgroundColor: '#4CAF50',
+    },
+    difficultyMedium: {
+      backgroundColor: '#FF9800',
+    },
+    difficultyHard: {
+      backgroundColor: '#F44336',
+    },
+    difficultyText: {
+      fontFamily: fontFamily.bold,
+      fontSize: moderateScale(10),
+      color: commonColors.white,
+    },
+    recipeDescription: {
+      fontFamily: fontFamily.regular,
+      fontSize: moderateScale(12),
+      color: colors.textSecondary,
+      lineHeight: moderateScale(16),
+      textAlign: isRTL ? 'right' : 'left',
     },
   }), [isRTL, theme, colors]);
 };

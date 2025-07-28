@@ -6,8 +6,9 @@ import { useTheme } from '@/context/ThemeContext';
 import useIsRTL from '@/hooks/useIsRTL';
 import useRTLStyles from './styles';
 import { useNavigation } from '@react-navigation/native';
-import { Banner, Category, FeaturedProduct } from './home2.types';
+import { Banner, Category, FeaturedProduct, Recipe } from './home2.types';
 import { categoriesData } from './categoriesData';
+import { recipesData } from './recipesData';
 import { SettingsIcon } from '@/assets/icons';
 import { Colors } from '@/styles/colors';
 
@@ -162,6 +163,30 @@ const Home2 = () => {
     </Pressable>
   );
 
+  const renderRecipeItem = ({ item }: { item: Recipe }) => (
+    <Pressable style={styles.recipeItem} onPress={() => (navigation as any).navigate('RecipeDetail', { recipe: item })}>
+      <Image source={{ uri: item.image }} style={styles.recipeImage} />
+      <View style={styles.recipeInfo}>
+        <TextComp text={item.name} style={styles.recipeName} />
+        <TextComp text={item.category} style={styles.recipeCategory} />
+        <View style={styles.recipeMeta}>
+          <View style={styles.recipeMetaItem}>
+            <TextComp text="⏱" style={styles.recipeIcon} />
+            <TextComp text={item.cookingTime} style={styles.recipeMetaText} />
+          </View>
+          <View style={styles.recipeMetaItem}>
+            <TextComp text="👥" style={styles.recipeIcon} />
+            <TextComp text={item.servings} style={styles.recipeMetaText} />
+          </View>
+          <View style={[styles.difficultyBadge, styles[`difficulty${item.difficulty}`]]}>
+            <TextComp text={item.difficulty} style={styles.difficultyText} />
+          </View>
+        </View>
+        <TextComp text={item.description} style={styles.recipeDescription} numberOfLines={2} />
+      </View>
+    </Pressable>
+  );
+
   const renderBannerIndicator = () => (
     <View style={styles.indicatorContainer}>
       {banners.map((_, index) => (
@@ -252,6 +277,24 @@ const Home2 = () => {
             horizontal
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={styles.productsContainer}
+          />
+        </View>
+
+        {/* Recipes Section */}
+        <View style={styles.section}>
+          <View style={styles.sectionHeader}>
+            <TextComp text="RECIPES" style={styles.sectionTitle} />
+            <TouchableOpacity onPress={() => (navigation as any).navigate('AllRecipes')}>
+              <TextComp text="VIEW_ALL" style={styles.viewAllText} />
+            </TouchableOpacity>
+          </View>
+          <FlatList
+            data={recipesData}
+            renderItem={renderRecipeItem}
+            keyExtractor={(item) => item.id}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.recipesContainer}
           />
         </View>
       </ScrollView>

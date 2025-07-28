@@ -30,4 +30,17 @@ export interface FeaturedProduct {
   image: string;
   rating: number;
   reviews: number;
+}
+
+export interface Recipe {
+  id: string;
+  name: string;
+  category: string;
+  cookingTime: string;
+  servings: string;
+  difficulty: 'Easy' | 'Medium' | 'Hard';
+  image: string;
+  description: string;
+  ingredients: string[];
+  instructions: string[];
 } 
