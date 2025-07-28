@@ -25,4 +25,8 @@ export type HomeStackParamList = {
   ProductDetail: {
     product?: FeaturedProduct;
   };
+  SubCategories: {
+    category: { name: string; icon: string };
+    subcategories: any[];
+  };
 }; 

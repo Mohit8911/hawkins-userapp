@@ -8,6 +8,7 @@ import useIsRTL from '@/hooks/useIsRTL';
 import useRTLStyles from './styles';
 import { useNavigation } from '@react-navigation/native';
 import { Banner, Category, FeaturedProduct } from './home2.types';
+import { categoriesData } from './categoriesData';
 
 const { width: screenWidth } = Dimensions.get('window');
 
@@ -34,18 +35,7 @@ const banners: Banner[] = [
 ];
 
 // Sample categories data based on Hawkins website
-const categories: Category[] = [
-  { id: '1', name: 'PRESSURE_COOKERS', icon: '🥘', count: '50+' },
-  { id: '2', name: 'HARD_ANODISED', icon: '🍳', count: '30+' },
-  { id: '3', name: 'NONSTICK', icon: '🫕', count: '25+' },
-  { id: '4', name: 'STAINLESS_STEEL', icon: '🥄', count: '40+' },
-  { id: '5', name: 'CERAMIC', icon: '🍽️', count: '20+' },
-  { id: '6', name: 'CAST_IRON', icon: '🫖', count: '15+' },
-  { id: '7', name: 'TRI_PLY', icon: '🥣', count: '35+' },
-  { id: '8', name: 'DIE_CAST', icon: '🍲', count: '18+' },
-  { id: '9', name: 'ACCESSORIES', icon: '🔧', count: '60+' },
-  { id: '10', name: 'COOKWARE_SETS', icon: '📦', count: '25+' }
-];
+const categories: Category[] = categoriesData;
 
 // Sample featured products data based on Hawkins website
 const featuredProducts: FeaturedProduct[] = [
@@ -129,7 +119,19 @@ const Home2 = () => {
   );
 
   const renderCategoryItem = ({ item }: { item: Category }) => (
-    <Pressable style={styles.categoryItem} onPress={() => (navigation as any).navigate('ProductDetail', { product: featuredProducts[0] })}>
+    <Pressable 
+      style={styles.categoryItem} 
+      onPress={() => {
+        if (item.subcategories && item.subcategories.length > 0) {
+          (navigation as any).navigate('SubCategories', { 
+            category: { name: item.name, icon: item.icon },
+            subcategories: item.subcategories 
+          });
+        } else {
+          (navigation as any).navigate('ProductDetail', { product: featuredProducts[0] });
+        }
+      }}
+    >
       <View style={styles.categoryIcon}>
         <TextComp text={item.icon} style={styles.categoryIconText} />
       </View>
