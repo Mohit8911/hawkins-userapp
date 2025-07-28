@@ -203,11 +203,6 @@ const ProductDetail = () => {
         showBack={true}
       />
       
-      {/* Share Button */}
-      <Pressable onPress={handleShare} style={styles.shareButton}>
-        <TextComp text="SHARE_PRODUCT" style={styles.shareButtonText} />
-      </Pressable>
-      
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
         {/* Product Images */}
         <View style={styles.imageSection}>
@@ -226,6 +221,12 @@ const ProductDetail = () => {
               </View>
             ))}
           </ScrollView>
+          
+          {/* Share Button - Positioned over images */}
+          <Pressable onPress={handleShare} style={styles.shareButton}>
+            <TextComp text="SHARE_PRODUCT" style={styles.shareButtonText} />
+          </Pressable>
+          
           {renderImageIndicator()}
         </View>
 

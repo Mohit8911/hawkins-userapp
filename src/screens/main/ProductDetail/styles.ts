@@ -237,15 +237,19 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
       textDecorationLine: 'underline',
     },
     shareButton: {
+      position: 'absolute',
+      top: moderateScale(16),
+      right: moderateScale(16),
       paddingHorizontal: moderateScale(12),
       paddingVertical: moderateScale(6),
-      backgroundColor: colors.surface,
+      backgroundColor: 'rgba(0, 0, 0, 0.6)',
       borderRadius: moderateScale(6),
+      zIndex: 1,
     },
     shareButtonText: {
       fontFamily: fontFamily.medium,
       fontSize: moderateScale(12),
-      color: colors.text,
+      color: '#FFFFFF',
     },
   }), [isRTL, theme, colors]);
 };

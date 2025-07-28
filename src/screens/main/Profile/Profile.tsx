@@ -144,7 +144,7 @@ const Profile = () => {
   const renderProfileHeader = () => (
     <View style={styles.profileHeader}>
       <View style={styles.profileImage}>
-        <Image source={require('@/assets/images/cart.png')} style={{ width: 100, height: 100 }} />
+        <Image source={{ uri: 'https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg' }} style={{ width: 100, height: 100, borderRadius: 100 }} />
       </View>
       <TextComp
         text={`Mohit Bhardwaj`}

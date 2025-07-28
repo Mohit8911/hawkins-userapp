@@ -14,6 +14,35 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
       flex: 1,
       backgroundColor: colors.background,
     },
+    headerContainer: {
+      backgroundColor: colors.background,
+      paddingTop: verticalScale(10),
+      paddingBottom: verticalScale(10),
+      borderBottomWidth: 1,
+      borderBottomColor: colors.inputBorder,
+    },
+    headerContent: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      paddingHorizontal: moderateScale(6),
+    },
+    logoImage: {
+      width: moderateScale(100),
+      height: moderateScale(40),
+    },
+    headerTitle: {
+      fontFamily: fontFamily.bold,
+      fontSize: moderateScale(28),
+      color: colors.text,
+      letterSpacing: 0,
+      flex: 1,
+      textAlign: 'center',
+    },
+    settingsButton: {
+      padding: moderateScale(4),
+      width: moderateScale(100),
+      alignItems: 'center',
+    },
     scrollView: {
       flex: 1,
     },

@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, ScrollView, FlatList, Image, Pressable, Dimensions } from 'react-native';
+import { View, ScrollView, FlatList, Image, Pressable, Dimensions, TouchableOpacity } from 'react-native';
 import WrapperContainer from '@/components/WrapperContainer';
-import HeaderComp from '@/components/HeaderComp';
 import TextComp from '@/components/TextComp';
 import { useTheme } from '@/context/ThemeContext';
 import useIsRTL from '@/hooks/useIsRTL';
@@ -9,6 +8,8 @@ import useRTLStyles from './styles';
 import { useNavigation } from '@react-navigation/native';
 import { Banner, Category, FeaturedProduct } from './home2.types';
 import { categoriesData } from './categoriesData';
+import { SettingsIcon } from '@/assets/icons';
+import { Colors } from '@/styles/colors';
 
 const { width: screenWidth } = Dimensions.get('window');
 
@@ -91,6 +92,7 @@ const Home2 = () => {
   const navigation = useNavigation();
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   const bannerRef = useRef<FlatList<Banner>>(null);
+  const colors = Colors[theme];
 
   // Auto-scroll functionality
   useEffect(() => {
@@ -185,7 +187,22 @@ const Home2 = () => {
 
   return (
     <WrapperContainer style={styles.container}>
-      <HeaderComp title="HAWKINS" showBack={false} />
+      {/* Custom Header with Logo, Title, and Settings */}
+      <View style={styles.headerContainer}>
+        <View style={styles.headerContent}>
+          <Image 
+            source={require('@/assets/images/logo.png')} 
+            style={styles.logoImage}
+            resizeMode="contain"
+          />
+          
+          <TextComp text="HAWKINS" style={styles.headerTitle} />
+          
+          <TouchableOpacity style={styles.settingsButton}>
+            <SettingsIcon fill={colors.text} width={20} height={20} />
+          </TouchableOpacity>
+        </View>
+      </View>
       
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
         {/* Banner Carousel */}
