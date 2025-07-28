@@ -7,4 +7,5 @@ export type User = {
     gender: string;
     image: string;
     token: string;
+    phone?: string;
   };

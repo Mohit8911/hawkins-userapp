@@ -98,7 +98,7 @@ const HeaderComp: React.FC<HeaderCompProps> = ({
                             style={styles.sectionTitle}
                         />
                         <View style={styles.optionRow}>
-                            <TouchableOpacity
+                            {/* <TouchableOpacity
                                 style={[styles.optionButton, defaultLanguage?.sortName === 'ar' && styles.optionButtonActive]}
                                 onPress={() => changedLanguage({ name: 'Arabic', sortName: 'ar' })}
                             >
@@ -106,7 +106,7 @@ const HeaderComp: React.FC<HeaderCompProps> = ({
                                     styles.optionText,
                                     defaultLanguage?.sortName === 'ar' && styles.optionTextActive
                                 ]} />
-                            </TouchableOpacity>
+                            </TouchableOpacity> */}
                             <TouchableOpacity
                                 style={[styles.optionButton, defaultLanguage?.sortName === 'en' && styles.optionButtonActive]}
                                 onPress={() => changedLanguage({ name: 'English', sortName: 'en' })}
