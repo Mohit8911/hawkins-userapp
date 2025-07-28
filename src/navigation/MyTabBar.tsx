@@ -7,17 +7,19 @@ import { Colors, commonColors, ThemeType } from '@/styles/colors';
 import { moderateScale } from '@/styles/scaling';
 import React, { useMemo } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import { useSelector } from '@/redux/hooks';
 
 
 // create a component
-const MyTabBar = ({ state, descriptors, navigation }) => {
+const MyTabBar = ({ state, descriptors, navigation }: any) => {
     const isRTL = useIsRTL();
     const { theme } = useTheme();
     const styles = useRTLStyles(isRTL, theme);
     const colors = Colors[theme];
+    const { totalItems } = useSelector((state) => state.cart);
     return (
         <View style={styles.container}>
-            {state?.routes.map((route, index) => {
+            {state?.routes.map((route: any, index: number) => {
                 const { options } = descriptors[route.key];
                 const isFocused = state.index === index;
 
@@ -49,7 +51,17 @@ const MyTabBar = ({ state, descriptors, navigation }) => {
                         onLongPress={onLongPress}
                         style={styles.subContainer}
                     >
-                        {icon}
+                        <View style={styles.iconContainer}>
+                            {icon}
+                            {route.name === 'Cart' && totalItems > 0 && (
+                                <View style={styles.badge}>
+                                    <TextComp
+                                        text={totalItems.toString()}
+                                        style={styles.badgeText}
+                                    />
+                                </View>
+                            )}
+                        </View>
                         <TextComp
                             text={route.name}
                             style={{
@@ -88,6 +100,26 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
         subContainer: {
             alignItems: 'center',
             justifyContent: 'center',
+        },
+        iconContainer: {
+            position: 'relative',
+        },
+        badge: {
+            position: 'absolute',
+            top: -5,
+            right: -8,
+            backgroundColor: commonColors.error,
+            borderRadius: moderateScale(10),
+            minWidth: moderateScale(20),
+            height: moderateScale(20),
+            justifyContent: 'center',
+            alignItems: 'center',
+            paddingHorizontal: moderateScale(4),
+        },
+        badgeText: {
+            color: commonColors.white,
+            fontSize: moderateScale(10),
+            fontFamily: 'Inter-Bold',
         },
     }), [isRTL, theme]);
 };

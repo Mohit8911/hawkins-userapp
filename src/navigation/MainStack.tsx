@@ -1,8 +1,9 @@
-import { HomeIcon, HomeInactiveIcon, ProfileInactiveIcon, SettingsIcon } from '@/assets/icons';
+import { HomeIcon, HomeInactiveIcon, ProfileInactiveIcon, SettingsIcon, CartIcon, CartInactiveIcon } from '@/assets/icons';
 import {
   Home,
   Profile,
-  Settings
+  Settings,
+  Cart
 } from '@/screens';
 import { Colors } from '@/styles/colors';
 import fontFamily from '@/styles/fontFamily';
@@ -13,6 +14,7 @@ import MyTabBar from './MyTabBar';
 import { MainStackParamList } from './types';
 import { useTheme } from '@/context/ThemeContext';
 import HomeStack from './HomeStack';
+import { Image } from 'react-native';
 
 const Tab = createBottomTabNavigator<MainStackParamList>();
 
@@ -48,6 +50,11 @@ export const MainStack = () => {
             focused ? <HomeIcon color={color} /> : <HomeInactiveIcon color={color} />
           ),
         }} />
+      <Tab.Screen name="Cart" component={Cart} options={{
+        tabBarIcon: ({ color, focused }) => (
+          focused ? <Image source={require('@/assets/images/cart.png')} style={{ width: 20, height: 20 }} /> : <Image source={require('@/assets/images/cart_inactive.png')} style={{ width: 20, height: 20 }} />
+        ),
+      }} />
       <Tab.Screen name="Profile" component={Profile} options={{
         tabBarIcon: ({ color, focused }) => (
           focused ? <ProfileInactiveIcon color={color} /> : <ProfileInactiveIcon color={color} />

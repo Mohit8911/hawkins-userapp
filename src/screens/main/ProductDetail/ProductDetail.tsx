@@ -11,6 +11,9 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import { HomeStackParamList } from '@/navigation/types';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RouteProp } from '@react-navigation/native';
+import { useSelector, useDispatch } from '@/redux/hooks';
+import actions from '@/redux/actions';
+import { CartItem } from '@/models/Cart';
 
 const { width: screenWidth } = Dimensions.get('window');
 
@@ -121,6 +124,7 @@ const ProductDetail = () => {
   const styles = useRTLStyles(isRTL, theme);
   const navigation = useNavigation<ProductDetailNavigationProp>();
   const route = useRoute<ProductDetailRouteProp>();
+  const dispatch = useDispatch();
   
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
@@ -143,6 +147,22 @@ const ProductDetail = () => {
   };
 
   const handleAddToCart = () => {
+    const cartItem: CartItem = {
+      id: productData.id,
+      name: productData.name,
+      price: productData.price,
+      originalPrice: productData.originalPrice,
+      quantity: quantity,
+      image: productData.images[0],
+      capacity: productData.capacity,
+      thickness: productData.thickness,
+      weight: productData.weight,
+      guarantee: productData.guarantee,
+      cartonDimensions: productData.cartonDimensions,
+      idealFor: productData.idealFor,
+    };
+    
+    dispatch(actions.addItemToCart(cartItem));
     Alert.alert('Success', 'Product added to cart!');
   };
 

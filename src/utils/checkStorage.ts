@@ -9,6 +9,7 @@ import { LanguageInterface, saveDefaultLanguage, saveDefaultTheme } from "@/redu
 import store from "@/redux/store";
 import i18next from "i18next";
 import { secureStorage } from "./secureStorage";
+import { loadCartFromStorageAction } from "@/redux/actions/cart";
 const { dispatch } = store;
 
 /**
@@ -65,6 +66,9 @@ export const getLocalItem = async () => {
             await secureStorage.setItem('THEME', systemTheme);
             dispatch(saveDefaultTheme({ myTheme: systemTheme }));
         }
+
+        // Load cart data from storage
+        await loadCartFromStorageAction();
     } catch (error) {
         console.log(error);
     }

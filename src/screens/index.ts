@@ -11,3 +11,4 @@ export { default as ProductList } from '@/screens/main/ProductList/ProductList';
 export { default as SubCategories } from '@/screens/main/SubCategories/SubCategories';
 export { default as Profile } from '@/screens/main/Profile/Profile';
 export { default as Settings } from '@/screens/main/Settings/Settings';
+export { default as Cart } from '@/screens/main/Cart/Cart';
