@@ -132,5 +132,14 @@
     "GASKETS": "حلقات",
     "SAFETY_VALVES": "صمامات الأمان",
     "HANDLES": "مقابض",
-    "LIDS": "أغطية"
+    "LIDS": "أغطية",
+    "PRODUCTS": "المنتجات",
+    "NO_PRODUCTS_FOUND": "لم يتم العثور على منتجات",
+    "FILTER": "تصفية",
+    "SORT": "ترتيب",
+    "PRICE_LOW_TO_HIGH": "السعر: من الأقل إلى الأعلى",
+    "PRICE_HIGH_TO_LOW": "السعر: من الأعلى إلى الأقل",
+    "RATING_HIGH_TO_LOW": "التقييم: من الأعلى إلى الأقل",
+    "NEWEST_FIRST": "الأحدث أولاً",
+    "CLEAR_FILTERS": "مسح المرشحات"
 }

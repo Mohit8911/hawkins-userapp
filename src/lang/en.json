@@ -132,5 +132,14 @@
     "GASKETS": "Gaskets",
     "SAFETY_VALVES": "Safety Valves",
     "HANDLES": "Handles",
-    "LIDS": "Lids"
+    "LIDS": "Lids",
+    "PRODUCTS": "Products",
+    "NO_PRODUCTS_FOUND": "No products found",
+    "FILTER": "Filter",
+    "SORT": "Sort",
+    "PRICE_LOW_TO_HIGH": "Price: Low to High",
+    "PRICE_HIGH_TO_LOW": "Price: High to Low",
+    "RATING_HIGH_TO_LOW": "Rating: High to Low",
+    "NEWEST_FIRST": "Newest First",
+    "CLEAR_FILTERS": "Clear Filters"
 }

@@ -7,6 +7,7 @@ export { default as OTPVerification } from './auth/OTPVerification/OTPVerificati
 export { default as Home } from '@/screens/main/Home/Home';
 export { default as Home2 } from '@/screens/main/Home2/Home2';
 export { default as ProductDetail } from '@/screens/main/ProductDetail/ProductDetail';
+export { default as ProductList } from '@/screens/main/ProductList/ProductList';
 export { default as SubCategories } from '@/screens/main/SubCategories/SubCategories';
 export { default as Profile } from '@/screens/main/Profile/Profile';
 export { default as Settings } from '@/screens/main/Settings/Settings';

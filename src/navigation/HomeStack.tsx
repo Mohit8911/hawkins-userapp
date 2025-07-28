@@ -1,6 +1,6 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Home2, ProductDetail, SubCategories } from '@/screens';
+import { Home2, ProductDetail, SubCategories, ProductList } from '@/screens';
 import { HomeStackParamList } from './types';
 
 const Stack = createNativeStackNavigator<HomeStackParamList>();
@@ -18,6 +18,7 @@ const HomeStack = () => {
       <Stack.Screen name="Home2" component={Home2} />
       <Stack.Screen name="ProductDetail" component={ProductDetail} />
       <Stack.Screen name="SubCategories" component={SubCategories} />
+      <Stack.Screen name="ProductList" component={ProductList} />
     </Stack.Navigator>
   );
 };
