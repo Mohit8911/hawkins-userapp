@@ -3,6 +3,7 @@ import { Colors, ThemeType, commonColors } from '@/styles/colors';
 import fontFamily from '@/styles/fontFamily';
 import { moderateScale, verticalScale } from '@/styles/scaling';
 import { useMemo } from 'react';
+import { width } from '@/styles/scaling';
 
 const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
   const colors = Colors[theme];
@@ -20,13 +21,13 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
       position: 'relative',
     },
     imageContainer: {
-      width: moderateScale(300),
+      width: width - 6,
       height: moderateScale(300),
     },
     productImage: {
       width: '100%',
       height: '100%',
-      resizeMode: 'cover',
+      resizeMode: 'contain',
     },
     imageIndicatorContainer: {
       position: 'absolute',

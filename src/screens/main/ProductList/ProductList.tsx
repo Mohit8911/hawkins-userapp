@@ -135,7 +135,7 @@ const getMockProducts = (category: string, subcategory: string): Product[] => {
       price: '₹1,125',
       originalPrice: '₹1,250',
       discount: '10% OFF',
-      image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_4.webp&crop=center',
       rating: 4.5,
       reviews: 128,
       features: ['1.5 Litre', 'Aluminium', 'Classic Design']
@@ -146,7 +146,7 @@ const getMockProducts = (category: string, subcategory: string): Product[] => {
       price: '₹1,260',
       originalPrice: '₹1,400',
       discount: '10% OFF',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_1.webp&crop=center',
       rating: 4.3,
       reviews: 95,
       features: ['2 Litre', 'Induction Compatible', 'Tall Design']
@@ -157,7 +157,7 @@ const getMockProducts = (category: string, subcategory: string): Product[] => {
       price: '₹1,505',
       originalPrice: '₹1,675',
       discount: '10% OFF',
-      image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_4.webp&crop=center',
       rating: 4.7,
       reviews: 156,
       features: ['3 Litre', 'Aluminium', 'Wide Design']
@@ -168,7 +168,7 @@ const getMockProducts = (category: string, subcategory: string): Product[] => {
       price: '₹1,910',
       originalPrice: '₹2,125',
       discount: '10% OFF',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_1.webp&crop=center',
       rating: 4.4,
       reviews: 87,
       features: ['4 Litre', 'Induction Compatible', 'Classic Design']
@@ -179,7 +179,7 @@ const getMockProducts = (category: string, subcategory: string): Product[] => {
       price: '₹2,045',
       originalPrice: '₹2,275',
       discount: '10% OFF',
-      image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_4.webp&crop=center',
       rating: 4.6,
       reviews: 203,
       features: ['5 Litre', 'Aluminium', 'With Separator']
@@ -190,7 +190,7 @@ const getMockProducts = (category: string, subcategory: string): Product[] => {
       price: '₹2,295',
       originalPrice: '₹2,550',
       discount: '10% OFF',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_1.webp&crop=center',
       rating: 4.2,
       reviews: 67,
       features: ['6.5 Litre', 'Induction Compatible', 'Tall Design']
@@ -201,7 +201,7 @@ const getMockProducts = (category: string, subcategory: string): Product[] => {
       price: '₹2,475',
       originalPrice: '₹2,750',
       discount: '10% OFF',
-      image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_4.webp&crop=center',
       rating: 4.8,
       reviews: 134,
       features: ['8 Litre', 'Aluminium', 'Wide Design']
@@ -212,7 +212,7 @@ const getMockProducts = (category: string, subcategory: string): Product[] => {
       price: '₹2,880',
       originalPrice: '₹3,200',
       discount: '10% OFF',
-      image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_4.webp&crop=center',
       rating: 4.5,
       reviews: 89,
       features: ['10 Litre', 'Aluminium', 'With Separator']
@@ -238,7 +238,7 @@ const getExtendedProducts = (category: string, subcategory: string): Product[] =
       price: '₹1,200',
       originalPrice: '₹1,500',
       discount: '20% OFF',
-      image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_4.webp&crop=center',
       rating: 4.6,
       reviews: 89,
       features: ['24cm', 'Nonstick', 'Induction Compatible']
@@ -249,7 +249,7 @@ const getExtendedProducts = (category: string, subcategory: string): Product[] =
       price: '₹1,800',
       originalPrice: '₹2,200',
       discount: '18% OFF',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_1.webp&crop=center',
       rating: 4.4,
       reviews: 67,
       features: ['28cm', 'Hard Anodised', 'Durable']
@@ -260,7 +260,7 @@ const getExtendedProducts = (category: string, subcategory: string): Product[] =
       price: '₹2,100',
       originalPrice: '₹2,600',
       discount: '19% OFF',
-      image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_4.webp&crop=center',
       rating: 4.7,
       reviews: 123,
       features: ['2 Litre', 'Stainless Steel', 'Tri-ply Base']
@@ -271,7 +271,7 @@ const getExtendedProducts = (category: string, subcategory: string): Product[] =
       price: '₹3,200',
       originalPrice: '₹3,800',
       discount: '16% OFF',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_1.webp&crop=center',
       rating: 4.8,
       reviews: 156,
       features: ['3 Litre', 'Cast Iron', 'Traditional']
@@ -282,7 +282,7 @@ const getExtendedProducts = (category: string, subcategory: string): Product[] =
       price: '₹1,600',
       originalPrice: '₹1,900',
       discount: '16% OFF',
-      image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_4.webp&crop=center',
       rating: 4.5,
       reviews: 78,
       features: ['26cm', 'Ceramic', 'Nonstick']
@@ -293,7 +293,7 @@ const getExtendedProducts = (category: string, subcategory: string): Product[] =
       price: '₹2,400',
       originalPrice: '₹2,900',
       discount: '17% OFF',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_1.webp&crop=center',
       rating: 4.6,
       reviews: 92,
       features: ['24cm', 'Die Cast', 'Heavy Duty']
@@ -307,7 +307,7 @@ const getExtendedProducts = (category: string, subcategory: string): Product[] =
       price: '₹4,500',
       originalPrice: '₹5,200',
       discount: '13% OFF',
-      image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_4.webp&crop=center',
       rating: 4.7,
       reviews: 234,
       features: ['6 Litre', 'Electric', 'Digital Display']
@@ -318,7 +318,7 @@ const getExtendedProducts = (category: string, subcategory: string): Product[] =
       price: '₹1,800',
       originalPrice: '₹2,100',
       discount: '14% OFF',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_1.webp&crop=center',
       rating: 4.4,
       reviews: 167,
       features: ['1.5 Litre', 'Electric', 'Auto Shut-off']
@@ -329,7 +329,7 @@ const getExtendedProducts = (category: string, subcategory: string): Product[] =
       price: '₹2,800',
       originalPrice: '₹3,300',
       discount: '15% OFF',
-      image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_4.webp&crop=center',
       rating: 4.5,
       reviews: 89,
       features: ['24cm', 'Electric', 'Nonstick']
@@ -343,7 +343,7 @@ const getExtendedProducts = (category: string, subcategory: string): Product[] =
       price: '₹150',
       originalPrice: '₹200',
       discount: '25% OFF',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_1.webp&crop=center',
       rating: 4.3,
       reviews: 456,
       features: ['Universal Fit', 'Durable', 'Replacement']
@@ -354,7 +354,7 @@ const getExtendedProducts = (category: string, subcategory: string): Product[] =
       price: '₹120',
       originalPrice: '₹150',
       discount: '20% OFF',
-      image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_4.webp&crop=center',
       rating: 4.6,
       reviews: 234,
       features: ['Safety Valve', 'Universal', 'High Quality']
@@ -365,7 +365,7 @@ const getExtendedProducts = (category: string, subcategory: string): Product[] =
       price: '₹180',
       originalPrice: '₹220',
       discount: '18% OFF',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_1.webp&crop=center',
       rating: 4.4,
       reviews: 123,
       features: ['Ergonomic', 'Heat Resistant', 'Easy Grip']
@@ -376,7 +376,7 @@ const getExtendedProducts = (category: string, subcategory: string): Product[] =
       price: '₹200',
       originalPrice: '₹250',
       discount: '20% OFF',
-      image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=400&fit=crop&crop=center',
+      image: 'https://www.buyhawkins.in/pc_pix/IFP20_4.webp&crop=center',
       rating: 4.5,
       reviews: 89,
       features: ['Universal', 'Stainless Steel', 'Durable']

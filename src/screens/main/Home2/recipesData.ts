@@ -8,7 +8,7 @@ export const recipesData: Recipe[] = [
     cookingTime: '30 mins',
     servings: '4 servings',
     difficulty: 'Medium',
-    image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=300&h=200&fit=crop',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9tXNH_xCEYOU9wjkNFLKfCHUf1mvc8QmR4g&s',
     description: 'Crispy dosa with potato masala filling, served with coconut chutney and sambar. Perfect for breakfast or brunch.',
     ingredients: [
       '2 cups rice',
@@ -38,7 +38,7 @@ export const recipesData: Recipe[] = [
     cookingTime: '45 mins',
     servings: '6 servings',
     difficulty: 'Hard',
-    image: 'https://images.unsplash.com/photo-1563379091339-03246963d4a9?w=300&h=200&fit=crop',
+    image: 'https://www.umami.recipes/api/image/recipes/xhclvNWmyYYlkT2Fz7WC/images/Q7xXdx1TDDjrQGTOhsBaOK?w=3840&q=75',
     description: 'Aromatic basmati rice cooked with tender chicken and aromatic spices. A perfect one-pot meal for special occasions.',
     ingredients: [
       '2 cups basmati rice',
@@ -73,7 +73,7 @@ export const recipesData: Recipe[] = [
     cookingTime: '25 mins',
     servings: '4 servings',
     difficulty: 'Easy',
-    image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=300&h=200&fit=crop',
+    image: 'https://www.yummytummyaarthi.com/wp-content/uploads/2021/12/1.jpg',
     description: 'Creamy and rich paneer curry in tomato-based gravy with butter. A restaurant-style dish perfect for dinner parties.',
     ingredients: [
       '200g paneer, cubed',
@@ -107,7 +107,7 @@ export const recipesData: Recipe[] = [
     cookingTime: '40 mins',
     servings: '4 servings',
     difficulty: 'Medium',
-    image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=300&h=200&fit=crop',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT69FeaPjtsF4HJ5FnURAZmRg8MhZTWaW9mRg&s',
     description: 'Creamy black lentils slow-cooked with spices and finished with cream. A rich and comforting dish perfect for cold days.',
     ingredients: [
       '1 cup black lentils (urad dal)',
@@ -142,7 +142,7 @@ export const recipesData: Recipe[] = [
     cookingTime: '35 mins',
     servings: '4 servings',
     difficulty: 'Medium',
-    image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=300&h=200&fit=crop',
+    image: 'https://www.allrecipes.com/thmb/gKD4hlJ26TYEvBTrYzX2SiF95Io=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-15022-veggie-pizza-DDMFS-4x3-hero-3dabf0783ef544eeaa23bdf28b48b178.jpg',
     description: 'Fresh vegetable pizza with homemade dough and tomato sauce. A healthy and delicious meal for the whole family.',
     ingredients: [
       'For dough: 2 cups all-purpose flour, 1 tsp yeast, 1 tsp sugar, 1/2 tsp salt, 1 tbsp olive oil',
@@ -171,7 +171,7 @@ export const recipesData: Recipe[] = [
     cookingTime: '20 mins',
     servings: '3 servings',
     difficulty: 'Easy',
-    image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=300&h=200&fit=crop',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqVPc49Ep0ehv9ZskczFpcOsCZKy56lji7Zw&s',
     description: 'Spicy fish curry with coconut milk and aromatic spices. A coastal delicacy that pairs perfectly with steamed rice.',
     ingredients: [
       '500g fish fillets (any white fish)',

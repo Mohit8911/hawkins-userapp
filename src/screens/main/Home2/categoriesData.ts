@@ -6,6 +6,7 @@ export const categoriesData: Category[] = [
     id: '1', 
     name: 'PRESSURE_COOKERS', 
     icon: '🥘', 
+    imageUrl: 'https://www.buyhawkins.in/assets/images/cooker-icon.jpg',
     count: '50+',
     subcategories: [
       { id: '1.1', name: 'CLASSIC', icon: '🥘', count: '8+', description: 'Traditional pressure cookers' },
@@ -29,6 +30,7 @@ export const categoriesData: Category[] = [
     id: '2', 
     name: 'COOKWARE', 
     icon: '🍳', 
+    imageUrl: 'https://www.buyhawkins.in/assets/images/kadhai-icon.jpg',
     count: '30+',
     subcategories: [
       { id: '2.1', name: 'HARD_ANODISED', icon: '🔧', count: '15+', description: 'Hard anodised cookware' },
@@ -46,6 +48,7 @@ export const categoriesData: Category[] = [
     id: '3', 
     name: 'ELECTRICALS', 
     icon: '🫕', 
+    imageUrl: 'https://www.buyhawkins.in/assets/images/kettle-icon.jpg',
     count: '25+',
     subcategories: [
       { id: '3.1', name: 'ELECTRIC_PRESSURE_COOKERS', icon: '⚡', count: '8+', description: 'Electric pressure cookers' },
@@ -58,6 +61,7 @@ export const categoriesData: Category[] = [
     id: '4', 
     name: 'FRYING_PAN', 
     icon: '🥄', 
+    imageUrl: 'https://www.buyhawkins.in/assets/images/pan-icon.jpg',
     count: '40+',
     subcategories: [
       { id: '4.1', name: 'NONSTICK_FRYING_PANS', icon: '🍳', count: '15+', description: 'Nonstick frying pans' },
@@ -70,6 +74,7 @@ export const categoriesData: Category[] = [
     id: '5', 
     name: 'TAVA', 
     icon: '🫓', 
+    imageUrl: 'https://www.buyhawkins.in/assets/images/tava-icon.jpg',
     count: '20+',
     subcategories: [
       { id: '5.1', name: 'NONSTICK_TAVA', icon: '🫓', count: '8+', description: 'Nonstick tava' },
@@ -82,6 +87,7 @@ export const categoriesData: Category[] = [
     id: '6', 
     name: 'DEEP_FRYING_PAN', 
     icon: '🫖', 
+    imageUrl: 'https://www.buyhawkins.in/assets/images/dfp-icon.jpg',
     count: '15+',
     subcategories: [
       { id: '6.1', name: 'NONSTICK_DEEP_FRYING_PAN', icon: '🍳', count: '15+', description: 'Nonstick deep frying pans' },
@@ -93,6 +99,7 @@ export const categoriesData: Category[] = [
     id: '7', 
     name: 'SETS', 
     icon: '🥣', 
+    imageUrl: 'https://www.buyhawkins.in/assets/images/set-icon.jpg',
     count: '35+',
     subcategories: [
       { id: '7.1', name: 'PRESSURE_COOKER_SETS', icon: '🥘', count: '12+', description: 'Pressure cooker sets' },
@@ -104,6 +111,7 @@ export const categoriesData: Category[] = [
     id: '8', 
     name: 'SAUCEPAN', 
     icon: '🍲', 
+    imageUrl: 'https://www.buyhawkins.in/assets/images/saucepan-icon.jpg',
     count: '18+',
     subcategories: [
       { id: '8.1', name: 'NONSTICK_SAUCEPAN', icon: '🍲', count: '8+', description: 'Nonstick saucepans' },
@@ -115,6 +123,7 @@ export const categoriesData: Category[] = [
     id: '9', 
     name: 'HANDI', 
     icon: '🔧', 
+    imageUrl: 'https://www.buyhawkins.in/assets/images/handi-icon.jpg',
     count: '60+',
     subcategories: [
       { id: '9.1', name: 'ALUMINIUM_HANDI', icon: '🔧', count: '20+', description: 'Aluminium handi' },
@@ -128,6 +137,7 @@ export const categoriesData: Category[] = [
     id: '10', 
     name: 'PARTS_AND_ACCESSORIES', 
     icon: '📦', 
+    imageUrl: 'https://www.buyhawkins.in/assets/images/idly-icon.jpg',
     count: '25+',
     subcategories: [
       { id: '10.1', name: 'GASKETS', icon: '🔧', count: '8+', description: 'Pressure cooker gaskets' },

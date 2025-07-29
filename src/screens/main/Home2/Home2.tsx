@@ -18,19 +18,19 @@ const { width: screenWidth } = Dimensions.get('window');
 const banners: Banner[] = [
   {
     id: '1',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=400&fit=crop',
+    image: 'https://stream.jdmagicbox.com/thumbnail/mp-1vefjpbz7cuwdj2-hawkins-contura-tomato-red-pressure-cooker-3-litre-ctr30--11432046/jd-Ott_720x540_Thumbnail.0000003.jpg',
     title: 'Premium Pressure Cookers',
     subtitle: 'Up to 40% off on selected items'
   },
   {
     id: '2',
-    image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=800&h=400&fit=crop',
+    image: 'https://www.buyhawkins.in/assets/images/Banner_aqua.webp',
     title: 'New Aqua Collection',
     subtitle: 'Discover our latest cookware range'
   },
   {
     id: '3',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=400&fit=crop',
+    image: 'https://www.hawkinscookers.com/NewHomePix/website-banner-01-new.jpg',
     title: 'PRO Cookware Series',
     subtitle: 'Professional grade for home chefs'
   }
@@ -39,47 +39,67 @@ const banners: Banner[] = [
 // Sample categories data based on Hawkins website
 const categories: Category[] = categoriesData;
 
-// Sample featured products data based on Hawkins website
+// Sample featured products data with variety of Hawkins cookware
 const featuredProducts: FeaturedProduct[] = [
   {
     id: 'FP20',
-    name: 'Futura Hard Anodised 2 Litre (FP20)',
+    name: 'Futura Hard Anodised 2 Litre Pressure Cooker',
     price: '₹3,195',
     originalPrice: '₹3,550',
     discount: '10%',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=300&fit=crop',
+    image: 'https://www.buyhawkins.in/pc_pix/IFP20_1.webp',
     rating: 4.5,
     reviews: 1247
   },
   {
-    id: 'FP40',
-    name: 'Futura Hard Anodised 4 Litre (FP40)',
-    price: '₹4,195',
-    originalPrice: '₹4,650',
-    discount: '10%',
-    image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=300&h=300&fit=crop',
+    id: 'TVA24',
+    name: 'Hawkins Tava 24cm Non-Stick Fry Pan',
+    price: '₹1,295',
+    originalPrice: '₹1,450',
+    discount: '11%',
+    image: 'https://www.buyhawkins.in/cw_pix/AT22_1.webp',
     rating: 4.3,
     reviews: 892
   },
   {
-    id: 'FP60',
-    name: 'Futura Hard Anodised 6 Litre (FP60)',
-    price: '₹5,195',
-    originalPrice: '₹5,750',
+    id: 'KTL15',
+    name: 'Hawkins Electric Kettle 1.5 Litre',
+    price: '₹1,895',
+    originalPrice: '₹2,100',
     discount: '10%',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=300&fit=crop',
+    image: 'https://www.buyhawkins.in/cw_pix/FKTA1_1.webp',
     rating: 4.7,
     reviews: 567
   },
   {
-    id: 'FP30',
-    name: 'Futura Hard Anodised 3 Litre (FP30)',
-    price: '₹3,695',
-    originalPrice: '₹4,100',
-    discount: '10%',
-    image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=300&h=300&fit=crop',
+    id: 'CWR28',
+    name: 'Hawkins Cookware Set 28cm Deep Pan',
+    price: '₹2,495',
+    originalPrice: '₹2,750',
+    discount: '9%',
+    image: 'https://www.buyhawkins.in/cw_pix/INF16G_1.webp',
     rating: 4.2,
     reviews: 445
+  },
+  {
+    id: 'FP40',
+    name: 'Futura Hard Anodised 4 Litre Pressure Cooker',
+    price: '₹4,195',
+    originalPrice: '₹4,650',
+    discount: '10%',
+    image: 'https://www.buyhawkins.in/pc_pix/FP7T_1.webp',
+    rating: 4.4,
+    reviews: 678
+  },
+  {
+    id: 'TVA28',
+    name: 'Hawkins Tava 28cm Deep Non-Stick Pan',
+    price: '₹1,695',
+    originalPrice: '₹1,850',
+    discount: '8%',
+    image: 'https://www.buyhawkins.in/cw_pix/ICT28_1.webp',
+    rating: 4.1,
+    reviews: 334
   }
 ];
 
@@ -136,7 +156,16 @@ const Home2 = () => {
       }}
     >
       <View style={styles.categoryIcon}>
-        <TextComp text={item.icon} style={styles.categoryIconText} />
+        {item.imageUrl ? (
+          <Image 
+            source={{ uri: item.imageUrl }} 
+            style={styles.categoryIcon}
+            resizeMode="contain"
+            defaultSource={require('@/assets/images/logo.png')}
+          />
+        ) : (
+          <TextComp text={item.icon} style={styles.categoryEmoji} />
+        )}
       </View>
       <TextComp text={item.name} style={styles.categoryName} />
       <TextComp text={item.count} style={styles.categoryCount} />

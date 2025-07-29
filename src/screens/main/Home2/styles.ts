@@ -134,15 +134,23 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
       alignItems: 'center',
       marginRight: moderateScale(20),
       width: moderateScale(80),
+      marginTop: moderateScale(10),
     },
     categoryIcon: {
       width: moderateScale(60),
       height: moderateScale(60),
-      borderRadius: moderateScale(30),
-      backgroundColor: commonColors.primary,
+      // borderRadius: moderateScale(30),
+      // backgroundColor: commonColors.primary,
       justifyContent: 'center',
       alignItems: 'center',
-      marginBottom: moderateScale(8),
+    },
+    categoryImage: {
+      flex: 1,
+      // borderRadius: moderateScale(20),
+    },
+    categoryEmoji: {
+      fontSize: moderateScale(24),
+      color: commonColors.white,
     },
     categoryIconText: {
       fontSize: moderateScale(24),
@@ -165,6 +173,7 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
     productsContainer: {
       paddingRight: moderateScale(16),
       marginBottom: verticalScale(24),
+      marginTop: moderateScale(10),
     },
     productItem: {
       width: moderateScale(160),
