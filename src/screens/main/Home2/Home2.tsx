@@ -11,6 +11,13 @@ import { categoriesData } from './categoriesData';
 import { recipesData } from './recipesData';
 import { SettingsIcon } from '@/assets/icons';
 import { Colors } from '@/styles/colors';
+import ModalComp from '@/components/ModalComp';
+import ButtonComp from '@/components/ButtonComp';
+import { changeLanguageState } from '@/redux/actions/settings';
+import { useSelector } from '@/redux/hooks';
+import { LanguageInterface } from '@/redux/reducers/settings';
+import { secureStorage } from '@/utils/secureStorage';
+import { clearDataAction } from '@/redux/actions/auth';
 
 const { width: screenWidth } = Dimensions.get('window');
 
@@ -107,13 +114,17 @@ const featuredProducts: FeaturedProduct[] = [
  * Hawkins Cookware Home Screen
  */
 const Home2 = () => {
-  const { theme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const isRTL = useIsRTL();
   const styles = useRTLStyles(isRTL, theme);
   const navigation = useNavigation();
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const bannerRef = useRef<FlatList<Banner>>(null);
   const colors = Colors[theme];
+
+  const { defaultTheme, defaultLanguage } = useSelector(state => state.settings);
+  const { isFirstTime } = useSelector(state => state.auth);
 
   // Auto-scroll functionality
   useEffect(() => {
@@ -239,6 +250,29 @@ const Home2 = () => {
     </View>
   );
 
+  const changedTheme = async () => {
+    const newTheme = defaultTheme.myTheme === 'light' ? 'dark' : 'light';
+    await secureStorage.setItem('THEME', newTheme);
+    toggleTheme();
+    closeModal();
+  }
+
+  const changedLanguage = (language: LanguageInterface) => {
+    changeLanguageState(language);
+    closeModal();
+  }
+
+  const closeModal = () => {
+    setIsModalVisible(false);
+  }
+
+  const onLogout = () => {
+    closeModal();
+    setTimeout(() => {
+      clearDataAction();
+    }, 400);
+  }
+
   return (
     <WrapperContainer style={styles.container}>
       {/* Custom Header with Logo, Title, and Settings */}
@@ -252,7 +286,10 @@ const Home2 = () => {
           
           <TextComp text="HAWKINS" style={styles.headerTitle} />
           
-          <TouchableOpacity style={styles.settingsButton}>
+          <TouchableOpacity 
+            style={styles.settingsButton}
+            onPress={() => setIsModalVisible(true)}
+          >
             <SettingsIcon fill={colors.text} width={20} height={20} />
           </TouchableOpacity>
         </View>
@@ -327,6 +364,71 @@ const Home2 = () => {
           />
         </View>
       </ScrollView>
+
+      <ModalComp isVisible={isModalVisible} onClose={closeModal}>
+        <View style={styles.modalContainer}>
+          <TextComp
+            text="SETTINGS"
+            style={styles.modalTitle}
+          />
+          <View style={styles.modalSection}>
+            <TextComp
+              text="LANGUAGE"
+              style={styles.sectionTitle}
+            />
+            <View style={styles.optionRow}>
+              <TouchableOpacity
+                style={[styles.optionButton, defaultLanguage?.sortName === 'en' && styles.optionButtonActive]}
+                onPress={() => changedLanguage({ name: 'English', sortName: 'en' })}
+              >
+                <TextComp text="English" isDynamic style={[
+                  styles.optionText,
+                  defaultLanguage?.sortName === 'en' && styles.optionTextActive
+                ]} />
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[styles.optionButton, defaultLanguage?.sortName === 'hi' && styles.optionButtonActive]}
+                onPress={() => changedLanguage({ name: 'हिंदी', sortName: 'hi' })}
+              >
+                <TextComp text="हिंदी" isDynamic style={[
+                  styles.optionText,
+                  defaultLanguage?.sortName === 'hi' && styles.optionTextActive
+                ]} />
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          <View style={styles.modalSection}>
+            <TextComp
+              text="THEME"
+              style={styles.sectionTitle}
+              isDynamic={false}
+            />
+            <View style={styles.optionRow}>
+              <TouchableOpacity
+                style={[styles.optionButton, theme === 'light' && styles.optionButtonActive]}
+                onPress={changedTheme}
+              >
+                <TextComp text="LIGHT" style={[
+                  styles.optionText,
+                  theme === 'light' && styles.optionTextActive
+                ]} />
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[styles.optionButton, theme === 'dark' && styles.optionButtonActive]}
+                onPress={changedTheme}
+              >
+                <TextComp text="DARK" style={[
+                  styles.optionText,
+                  theme === 'dark' && styles.optionTextActive
+                ]} />
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          {isFirstTime ? <ButtonComp title="LOGOUT" onPress={onLogout} /> : null}
+        </View>
+      </ModalComp>
     </WrapperContainer>
   );
 };

@@ -48,7 +48,7 @@ const Profile = () => {
       orderNumber: 'ORD-2024-001',
       date: '2024-01-15',
       status: 'delivered',
-      total: '$299.99',
+      total: '₹1299.99',
       items: cartItems.map((item, index) => ({
         id: item.id,
         name: item.name,
@@ -71,7 +71,7 @@ const Profile = () => {
       orderNumber: 'ORD-2024-002',
       date: '2024-01-20',
       status: 'shipped',
-      total: '$149.99',
+      total: '₹149.99',
       items: cartItems.slice(0, 2).map((item) => ({
         id: item.id,
         name: item.name,
@@ -129,7 +129,7 @@ const Profile = () => {
   const handleLogout = () => {
     Alert.alert(
       t('LOGOUT'),
-      'Are you sure you want to logout?',
+      t('LOGOUT_CONFIRMATION'),
       [
         { text: t('CANCEL'), style: 'cancel' },
         {
@@ -244,7 +244,7 @@ const Profile = () => {
       
       {mockOrders.length > 0 ? (
         mockOrders.map((order) => (
-          <Pressable key={order.id} style={styles.orderCard} onPress={() => Alert.alert('Order Details', `Order ${order.orderNumber}`)}>
+          <Pressable key={order.id} style={styles.orderCard} onPress={() => Alert.alert(t('ORDER_DETAILS'), `${t('ORDER')} ${order.orderNumber}`)}>
             <View style={styles.orderHeader}>
               <TextComp text={`${t('ORDER_ID')}: ${order.orderNumber}`} style={styles.orderId} />
               <View style={[styles.orderStatus, getStatusColor(order.status)]}>

@@ -105,7 +105,7 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
     
     // Section Styles
     section: {
-      marginBottom: verticalScale(24),
+      marginBottom: moderateScale(24),
       paddingHorizontal: moderateScale(16),
     },
     sectionHeader: {
@@ -331,6 +331,48 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
       color: colors.textSecondary,
       lineHeight: moderateScale(16),
       textAlign: isRTL ? 'right' : 'left',
+    },
+
+    // Modal Styles
+    modalContainer: {
+      backgroundColor: colors.background,
+      minHeight: moderateScale(100),
+    },
+    modalTitle: {
+      fontSize: moderateScale(24),
+      fontFamily: fontFamily.bold,
+      marginBottom: moderateScale(24),
+      textAlign: 'center',
+    },
+    modalSection: {
+      marginBottom: moderateScale(24),
+    },
+    optionRow: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: moderateScale(8),
+    },
+    optionButton: {
+      flex: 1,
+      padding: moderateScale(12),
+      borderRadius: moderateScale(12),
+      backgroundColor: colors.surface,
+      alignItems: 'center',
+      borderWidth: 1,
+      borderColor: colors.inputBorder,
+    },
+    optionButtonActive: {
+      backgroundColor: colors.text,
+      borderColor: colors.text,
+    },
+    optionText: {
+      fontSize: moderateScale(16),
+      fontFamily: fontFamily.medium,
+      color: colors.text,
+    },
+    optionTextActive: {
+      color: colors.background,
     },
   }), [isRTL, theme, colors]);
 };

@@ -261,5 +261,8 @@
     "PHONE_NUMBER_1": "رقم الهاتف 1",
     "PHONE_NUMBER_2": "رقم الهاتف 2",
     "EMAIL_ENQUIRY": "البريد الإلكتروني للاستفسار",
-    "HEAD_OFFICE": "المكتب الرئيسي"
+    "HEAD_OFFICE": "المكتب الرئيسي",
+    "LOGOUT_CONFIRMATION": "هل أنت متأكد من أنك تريد تسجيل الخروج؟",
+    "ORDER_DETAILS": "تفاصيل الطلب",
+    "ORDER": "الطلب"
 }

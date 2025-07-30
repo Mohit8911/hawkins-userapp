@@ -261,5 +261,8 @@
     "PHONE_NUMBER_1": "Phone Number 1",
     "PHONE_NUMBER_2": "Phone Number 2",
     "EMAIL_ENQUIRY": "Email Enquiry",
-    "HEAD_OFFICE": "Head Office"
+    "HEAD_OFFICE": "Head Office",
+    "LOGOUT_CONFIRMATION": "Are you sure you want to logout?",
+    "ORDER_DETAILS": "Order Details",
+    "ORDER": "Order"
 }
