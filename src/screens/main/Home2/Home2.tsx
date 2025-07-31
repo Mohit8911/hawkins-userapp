@@ -350,9 +350,9 @@ const Home2 = () => {
         <View style={styles.section}>
           <View style={styles.sectionHeader}>
             <TextComp text="RECIPES" style={styles.sectionTitle} />
-            <TouchableOpacity onPress={() => (navigation as any).navigate('AllRecipes')}>
+            {/* <TouchableOpacity onPress={() => (navigation as any).navigate('AllRecipes')}>
               <TextComp text="VIEW_ALL" style={styles.viewAllText} />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </View>
           <FlatList
             data={recipesData}
